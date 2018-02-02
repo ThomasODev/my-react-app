@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AccordionExampleStyled from "./Accordion";
 
 /**
  * Randomly generate a number. Then this will change the input text.
@@ -26,6 +27,9 @@ class App extends Component {
                             You won't start from anywhere, you'll have to lean the code yourself. Goodluck.
                         </p>
                 }
+
+            <AccordionExampleStyled/>
+
             </div>
         );
     }
