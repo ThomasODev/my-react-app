@@ -33,6 +33,9 @@ class App extends Component {
 
                 <Game/>
 
+                <div id="world"></div>
+
+
             </div>
         );
     }
