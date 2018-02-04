@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AccordionExampleStyled from "./Accordion";
-import { Game } from 'TicTacToe';
+import {Game} from "./TicTacToe";
 
 /**
  * Randomly generate a number. Then this will change the input text.
