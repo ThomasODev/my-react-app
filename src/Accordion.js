@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Accordion, Icon} from 'semantic-ui-react';
 import _ from 'lodash';
 import faker from 'faker';
+import MenuExampleSecondaryPointing from "./Menu";
 
 export default class AccordionExampleStyled extends Component {
     state = {activeIndex: 0}
@@ -17,13 +18,11 @@ export default class AccordionExampleStyled extends Component {
     render() {
         const {activeIndex} = this.state
         const style = {width: "75vw", margin: "auto", marginTop: "50px", marginBottom: "50px"}
-        const panels = _.times(3, () => ({
-            title: faker.lorem.sentence(),
-            content: faker.lorem.paragraphs(),
-        }))
+
         return (
             <div style={style}>
-                <Accordion styled fluid defaultActiveIndex={[0, 2]} panels={panels} exclusive={false}>
+                <MenuExampleSecondaryPointing/>
+                <Accordion styled fluid exclusive={false}>
                     <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
                         <Icon name='dropdown'/>
                         What is a dog?
@@ -71,3 +70,12 @@ export default class AccordionExampleStyled extends Component {
         )
     }
 }
+
+const panels = _.times(3, () => ({
+    title: faker.lorem.sentence(),
+    content: faker.lorem.paragraphs(),
+}))
+
+export const AccordionExclusive = () => (
+    <Accordion defaultActiveIndex={[]} panels={panels} styled exclusive={false} fluid/>
+)
