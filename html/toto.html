@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const json = {
+            a: 'a',
+            b: 'b',
+        }
+
+        switch (json.b) {
+            case (a = 'a'):
+                console.log('case a');
+                break;
+            case (b = 'b'):
+                console.log('case b');
+                break;
+
+            default:
+                console.log('toto');
+        }
+
+
+        if (json.a = 'a') {
+            console.log('if a')
+        } else if (json.b = 'b') {
+            console.log('if b')
+        } else {
+            console.log('if else')
+        }
+
+
+        testFunction = (a, b) => {
+            console.log('a', a);
+            console.log('b', b);
+        }
+
+        testFunction("aa", 'bb')
+
+
+
+        let toto = 0;
+
+        function totoa() {
+
+            const tata = 5;
+
+            while (toto < tata)
+            if (toto < tata) {
+                console.log(toto);
+                return toto++
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<div id="toto">
+    <button onclick=totoa()>Here</button>
+</div>
+
+</body>
+</html>
