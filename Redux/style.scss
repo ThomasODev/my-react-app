@@ -1,0 +1,81 @@
+/* Nothing especially cool in here either. Just styles */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, html {
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(45deg, #002233, #224400);
+  color: #ed8;
+  font-size: 16px;
+}
+
+.main {
+  position: relative;
+  padding: 1em;
+  height: 100vh;
+  widht: 100vw;
+}
+
+pre {
+  position: fixed;
+  top: 50px;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  font-size: 13px;
+  overflow: auto;
+
+  div {
+    padding-top: 0.75em;
+    + div {
+      border-top: 1px dotted rgba(#ed8, 0.4);
+      margin-top: 0.75em;
+    }
+  }
+}
+
+.buttons {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #ed8;
+  color: #ed8;
+  padding: 0.5em 2em;
+  font-size: 13px;
+  border-radius: 0.5em;
+  font-family: monospace;
+}
+
+nav {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+
+  a {
+    display: block;
+    text-align: right;
+    padding: 0.25em;
+    color: #ad3;
+
+    &.active {
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
