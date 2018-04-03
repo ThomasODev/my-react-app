@@ -4,6 +4,7 @@ import './App.css';
 import {AccordionExclusive} from "./Accordion";
 import {Game} from "./TicTacToe";
 import AccordionExampleStyled from "./Accordion";
+import {MultipleCheckboxField} from "./MultipleCheckboxField";
 
 /**
  * Randomly generate a number. Then this will change the input text.
@@ -19,6 +20,9 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
+
+                <MultipleCheckboxField/>
+
                 {
                     math > 50 ?
                         <p className="App-intro">
