@@ -73,7 +73,7 @@ export default class AccordionExampleStyled extends Component {
 
 const panels = _.times(3, () => ({
     title: faker.lorem.sentence(),
-    content: faker.lorem.paragraphs(),
+    content: <div>{faker.lorem.paragraphs()}</div>,
 }))
 
 export const AccordionExclusive = () => (
