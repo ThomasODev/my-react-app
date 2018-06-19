@@ -7,6 +7,7 @@
     "chai": "^4.1.2",
     "faker": "^4.1.0",
     "lodash": "^4.17.4",
+    "npm": "^6.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0",
@@ -17,11 +18,13 @@
     "wdio": "^1.0.3",
     "wdio-chai-plugin": "^0.0.2"
   },
+  "main": "src/electron-starter.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "electron ."
   },
   "devDependencies": {
     "babel-jest": "^22.4.1",
