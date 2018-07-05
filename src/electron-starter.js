@@ -10,13 +10,45 @@ let mainWindow
 
 function createWindow () {
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 800, height: 600})
+    mainWindow = new BrowserWindow({width: 800, height: 600, icon: __dirname + '/scribe_icon.ico'})
 
     // and load the index.html of the app.
     mainWindow.loadURL(`file://${__dirname}/index.html`)
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools()
+
+
+
+    window_to_PDF = new BrowserWindow({show : false});//to just open the browser in background
+    window_to_PDF.loadURL('anylink.html'); //give the file link you want to display
+    function pdfSettings() {
+        var paperSizeArray = ["A4", "A5"];
+        var option = {
+            landscape: false,
+            marginsType: 0,
+            printBackground: false,
+            printSelectionOnly: false,
+            pageSize: paperSizeArray[settingCache.getPrintPaperSize()-1],
+        };
+        return option;
+    }
+    window_to_PDF.webContents.printToPDF(pdfSettings(), function(err, data) {
+        if (err) {
+            //do whatever you want
+            return;
+        }
+        try{
+            fs.writeFileSync('./generated_pdf.pdf', data);
+        }catch(err){
+            //unable to save pdf..
+        }
+
+    })
+
+
+
+
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
